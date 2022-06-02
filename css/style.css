@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* Custom properties */
 :root {
     --ff-primary: 'Roboto', sans-serif;
@@ -34,6 +36,8 @@
     }
 }
 
+
+
 /* General styles */
 body {
     background: var(--clr-light);
@@ -43,6 +47,8 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+
+    overflow-x: hidden;
 }
 
 section {
@@ -63,6 +69,8 @@ strong {
     outline-offset: 3px;
 }
 
+
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -81,6 +89,8 @@ strong {
 .btn:hover {
     transform: scale(1.1);
 }
+
+
 
 /* Typography */
 h1,
@@ -128,10 +138,20 @@ h3 {
     padding: .25em 1em;
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+
+
 /* Header */
 nav {
     display: none;
 }
+
+
 
 /* Intro section */
 .intro {
@@ -226,12 +246,13 @@ nav {
 
 .about-me__img {
     /*box-shadow: var(--bs);*/
+    max-width: 100%;
 }
 
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr 300px;
         grid-template-areas:
             "title img"
             "subtitle img"
@@ -246,13 +267,56 @@ nav {
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(300px + 4em);
     }
 
     .about-me__img {
         grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 
-    /*.about-me__body {
+    .about-me__body {
         grid-area: text;
-    }*/
+    }
+}
+
+
+
+/* My Work */
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio__item {
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition:
+            transform 750ms cubic-bezier(.5, 0, .5, 1),
+            opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .75;
 }
