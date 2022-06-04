@@ -16,7 +16,7 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #2dcece;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -41,6 +41,10 @@
 
 
 /* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -64,11 +68,6 @@ img {
 
 strong {
     font-weight: var(--fw-bold);
-}
-
-:focus {
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
 }
 
 
@@ -193,6 +192,74 @@ header {
 
 .nav__link:hover {
     color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: 1em .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-10px);
+}
+
+.nav-open .hamburger,
+.nav-open .hamburger::before,
+.nav-open .hamburger::after {
+    background: var(--clr-accent);
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {
+    top: 10px;
+}
+
+.hamburger::after {
+    bottom: 10px;
 }
 
 
@@ -355,6 +422,8 @@ header {
 }
 
 .portfolio__item:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
     position: relative;
     z-index: 2;
 }
