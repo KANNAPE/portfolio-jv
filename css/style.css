@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Stop Bullying';
+    src: url("../font/stop-bullying.otf");
+}
+
 
 
 /* Custom properties */
 :root {
     --ff-primary: 'Roboto', sans-serif;
     --ff-secondary: 'Roboto Mono', monospace;
+    --ff-title: 'Stop Bullying', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -59,6 +65,7 @@ body {
 
 section {
     padding: 5em 2em;
+    min-height: 100vh;
 }
 
 img {
@@ -128,6 +135,10 @@ h3 {
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+    
 }
 
 .section__subtitle--intro,
@@ -261,7 +272,6 @@ header {
 .hamburger::after {
     bottom: 10px;
 }
-
 
 
 /* Intro section */
