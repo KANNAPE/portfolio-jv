@@ -286,6 +286,7 @@ header {
 
 @media (min-width: 600px) {
     .intro {
+        padding-top: 33vh;
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -294,7 +295,8 @@ header {
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
-        grid-template-rows: min-content;
+        grid-template-rows: 160px min-content;
+        background-color: #eee;
     }
 
     .intro__img {
