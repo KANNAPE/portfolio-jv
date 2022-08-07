@@ -138,7 +138,7 @@ h3 {
 }
 
 .section__subtitle--intro {
-    
+
 }
 
 .section__subtitle--intro,
@@ -277,6 +277,7 @@ header {
 /* Intro section */
 .intro {
     position: relative;
+    background-color: darkgreen;
 }
 
 .intro__img {
@@ -293,6 +294,7 @@ header {
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
+        grid-template-rows: min-content;
     }
 
     .intro__img {
