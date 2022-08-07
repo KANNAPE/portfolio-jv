@@ -273,11 +273,22 @@ header {
     bottom: 10px;
 }
 
+.fixed-background {
+    position: fixed;
+    z-index: -999;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.fixed-background img {
+
+}
+
 
 /* Intro section */
 .intro {
     position: relative;
-    background-color: darkgreen;
 }
 
 .intro__img {
