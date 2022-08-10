@@ -296,7 +296,7 @@ header {
 
 .section__title--intro {
     background-color: var(--clr-light);
-    padding: .5em 20px;
+    padding: .5em .4em;
 }
 
 @media (min-width: 600px) {
@@ -333,6 +333,12 @@ header {
 
     .section__title--intro {
         background-color: transparent;
+        padding: 1em 0 0 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .section__title--intro {
         padding: 0;
     }
 }
