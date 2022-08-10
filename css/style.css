@@ -294,6 +294,11 @@ header {
     box-shadow: var(--bs);
 }
 
+.section__title--intro {
+    background-color: var(--clr-light);
+    padding: .5em 20px;
+}
+
 @media (min-width: 600px) {
     .intro {
         padding-top: 33vh;
@@ -325,8 +330,15 @@ header {
         left: -1.5em;
         width: calc(100% + 1.5em);
     }
+
+    .section__title--intro {
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
+
+/* Services section */
 .my-services {
     background-color: var(--clr-dark);
     background-image: url(../img/services-bg.jpg);
@@ -374,6 +386,8 @@ header {
     }
 }
 
+
+/* About me section */
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
