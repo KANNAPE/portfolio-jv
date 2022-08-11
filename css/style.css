@@ -298,6 +298,7 @@ header {
 @media (min-width: 600px) {
     header {
         position: fixed;
+        padding: 0.5em;
         z-index: 9;
         width: 100%;
         background-color: var(--clr-dark);
