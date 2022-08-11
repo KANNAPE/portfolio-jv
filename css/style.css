@@ -340,6 +340,14 @@ header {
 }
 
 @media (min-width: 800px) {
+    .intro {
+        grid-template-rows: 175px min-content;
+    }
+
+    .intro__img {
+        min-width: 350px;
+    }
+
     .section__title--intro {
         padding: 0;
     }
