@@ -20,7 +20,8 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
+    --clr-white: #fff;
+    --clr-light: #eee;
     --clr-dark: #303030;
     --clr-accent: #2dcece;
 
@@ -303,13 +304,14 @@ header {
     .intro {
         padding-top: 33vh;
         display: grid;
-        width: min-content;
+        width: 50vw;
+        min-width: min-content;
         margin: 0 auto;
-        grid-column-gap: 1em;
+        grid-column-gap: 5vw;
         grid-template-areas:
             "img title"
             "img subtitle";
-        grid-template-columns: min-content max-content;
+        grid-template-columns: min-content 1fr;
         grid-template-rows: 160px min-content;
         background-color: #eee;
     }
@@ -327,8 +329,8 @@ header {
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
+        left: -1.8em;
+        width: calc(100% + 1.8em);
     }
 
     .section__title--intro {
@@ -340,6 +342,11 @@ header {
 @media (min-width: 800px) {
     .section__title--intro {
         padding: 0;
+    }
+
+    .section__subtitle--intro {
+        left: -1.5em;
+        width: calc(100% + 1.5em);
     }
 }
 
