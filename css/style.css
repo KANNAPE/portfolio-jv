@@ -41,8 +41,8 @@
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
-    --fs-h3: 1.25em;
-    --fs-nav: .95em;
+    --fs-h3: 1.25rem;
+    --fs-nav: .95rem;
     --fs-body: 1rem;
     --fs-little: .8rem;
 
@@ -54,8 +54,8 @@
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
-        --fs-h3: 1.5em;
-        --fs-nav: 1.1em;
+        --fs-h3: 1.5rem;
+        --fs-nav: 1.3rem;
         --fs-body: 1.125rem;
         --fs-little: .95rem;
     }
@@ -191,7 +191,23 @@ header {
 }
 
 .logo {
-    max-width: 300px;
+    width: 65px;
+}
+
+.logo a {
+    display: inline-grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: calc(100px - 1em);
+}
+
+.logo a img {
+    align-self: stretch;
+}
+
+.logo a img + img {
+    padding-left: 10px;
+    display: none;
+    align-self: center;
 }
 
 .nav {
@@ -221,10 +237,23 @@ header {
 
 .nav__link {
     text-decoration: none;
+    transition: text-shadow 100ms linear;
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    text-shadow: var(--clr-nav-3) 4px 8px 3px;
+}
+
+.nav__item:first-child .nav__link:hover {
+    text-shadow: var(--clr-nav-1) 4px 8px 3px;
+}
+
+.nav__item:last-child .nav__link:hover {
+    text-shadow: var(--clr-nav-4) 4px 8px 3px;
+}
+
+.nav__item:nth-child(2) .nav__link:hover {
+    text-shadow: var(--clr-nav-2) 4px 8px 3px;
 }
 
 .nav-toggle {
@@ -306,6 +335,16 @@ header {
     left: 0;
 }
 
+@media (min-width: 1000px) {
+    .logo {
+        width: 250px;
+    }
+
+    .logo a img + img {
+        display: block;
+    }
+}
+
 @media (min-width: 600px) {
     header {
         position: fixed;
@@ -345,27 +384,7 @@ header {
         padding-left: 3vw;
     }
 
-    .nav__link:hover {
-        color: var(--clr-nav-3);
-    }
-
-    .nav__item:first-child .nav__link:hover {
-        color: var(--clr-nav-1);
-    }
-
-    .nav__item:last-child .nav__link:hover {
-        color: var(--clr-nav-4);
-    }
-
-    .nav__item:nth-child(2) .nav__link:hover {
-        color: var(--clr-nav-2);
-    }
-
-    .logo {
-        width: 65px;
-    }
-
-    .hamburger {
+    .nav-toggle {
         display: none;
     }
 }
