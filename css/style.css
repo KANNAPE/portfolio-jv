@@ -32,12 +32,15 @@
 
     --clr-white: #fff;
     --clr-light: #eee;
-    --clr-dark: #303030;
-    --clr-accent: #2dcece;
-    --clr-nav-1: #f02d57;
-    --clr-nav-2: #f5af2d;
-    --clr-nav-3: #7eb801;
-    --clr-nav-4: #735396;
+    --clr-grey: #888;
+    --clr-dark: #333;
+    --clr-black: #111;
+    --clr-accent: #3aa9fc;
+
+    --clr-nav-1: #00ffff;
+    --clr-nav-2: #aeff00;
+    --clr-nav-3: #ffac00;
+    --clr-nav-4: #ff0044;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -72,6 +75,7 @@ body {
     background: var(--clr-light);
     color: var(--clr-dark);
 
+    position: relative;
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -396,7 +400,7 @@ header {
 }
 
 .intro__img {
-    box-shadow: var(--bs);
+
 }
 
 .section__title--intro {
@@ -421,6 +425,8 @@ header {
     }
 
     .intro__img {
+        box-shadow: var(--bs);
+        border-radius: 3em;
         grid-area: img;
         min-width: 250px;
         position: relative;
@@ -602,7 +608,10 @@ header {
 
 /* Footer */
 .footer {
-    background: #111;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--clr-black);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0 .5em;
