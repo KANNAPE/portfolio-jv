@@ -399,10 +399,6 @@ header {
     position: relative;
 }
 
-.intro__img {
-
-}
-
 .section__title--intro {
     background-color: var(--clr-light);
     padding: .5em .4em;
@@ -410,12 +406,13 @@ header {
 
 @media (min-width: 600px) {
     .intro {
-        padding-top: 33vh;
+        align-items: flex-end;
+        padding-top: 25vh;
         display: grid;
         width: 50vw;
         min-width: min-content;
         margin: 0 auto;
-        grid-column-gap: 5vw;
+        grid-column-gap: 2vw;
         grid-template-areas:
             "img title"
             "img subtitle";
@@ -435,16 +432,16 @@ header {
 
     .section__subtitle--intro {
         align-self: start;
-        grid-column: -1 / 1;
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.8em;
-        width: calc(100% + 1.8em);
+        margin-top: 1em;
+        border-radius: .7em;
     }
 
     .section__title--intro {
         background-color: transparent;
+        margin: 0;
         padding: 1em 0 0 0;
     }
 }
@@ -460,11 +457,6 @@ header {
 
     .section__title--intro {
         padding: 0;
-    }
-
-    .section__subtitle--intro {
-        left: -1.5em;
-        width: calc(100% + 1.5em);
     }
 }
 
