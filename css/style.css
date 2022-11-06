@@ -34,7 +34,7 @@
     --clr-light: #eee;
     --clr-grey: #888;
     --clr-dark: #333;
-    --clr-black: #111;
+    --clr-black: #1a1a1a;
     --clr-accent: #3aa9fc;
 
     --clr-nav-1: #00ffff;
@@ -46,11 +46,18 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-nav: .95rem;
+    --fs-about: 1.125rem;
     --fs-body: 1rem;
     --fs-little: .8rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
             0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 1100px) {
+    :root {
+        --fs-about: 1.25rem!important; /* je sais pas pourquoi ça marche pas sans le !important... (mon niveau ridicule en dev web déso pas déso je suis game dev */
+    }
 }
 
 @media (min-width: 800px) {
@@ -59,6 +66,7 @@
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-nav: 1.3rem;
+        --fs-about: 1rem;
         --fs-body: 1.125rem;
         --fs-little: .95rem;
     }
@@ -166,14 +174,12 @@ h3 {
     font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro {
-
-}
-
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+
+    box-shadow: var(--bs);
 
     margin-bottom: 1em;
     padding: .25em 1em;
@@ -183,6 +189,10 @@ h3 {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+}
+
+.about-me__body {
+    font-size: var(--fs-about);
 }
 
 
@@ -216,7 +226,7 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
+    background: var(--clr-black);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -355,7 +365,7 @@ header {
         padding: 0.5em;
         z-index: 9;
         width: 100%;
-        background-color: var(--clr-dark);
+        background-color: var(--clr-black);
         top: 0;
         height: 100px;
     }
@@ -409,8 +419,7 @@ header {
         align-items: flex-end;
         padding-top: 25vh;
         display: grid;
-        width: 50vw;
-        min-width: min-content;
+        width: min-content;
         margin: 0 auto;
         grid-column-gap: 2vw;
         grid-template-areas:
@@ -475,7 +484,8 @@ header {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100px min-content 1fr;
         grid-template-areas:
             "title img"
             "subtitle img"
@@ -485,16 +495,16 @@ header {
 
     .section__title--about {
         grid-area: title;
+        margin-top: .25em;
     }
 
     .section__subtitle--about {
-        grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc(300px + 4em);
+        border-radius: .7em;
+        align-self: flex-end;
+        margin-bottom: 2em;
     }
 
     .about-me__img {
@@ -606,7 +616,7 @@ header {
     background: var(--clr-black);
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em 0 .5em;
+    padding: 1.5em 0 .5em;
     font-size: var(--fs-h3);
 }
 
@@ -629,7 +639,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1.5em 0 .5em;
     padding: 0;
 }
 
