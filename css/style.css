@@ -93,8 +93,12 @@ body {
 }
 
 section {
-    padding: calc(5em + 100px) 2em 5em 2em;
+    padding: calc(5em + 100px) 10vw 5em 10vw;
     min-height: 100vh;
+}
+
+section.intro {
+    padding-top: calc(20vh + 100px);
 }
 
 img {
