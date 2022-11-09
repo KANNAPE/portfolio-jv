@@ -10,10 +10,10 @@ backToTop.addEventListener('click', function() {
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    if (document.body.scrollTop > visualViewport.height * .9 || document.documentElement.scrollTop > visualViewport.height * .9) {
         backToTop.classList.remove("back-to-top__hidden");
     } else {
-        backToTop.classList.toggle("back-to-top__hidden");
+        backToTop.classList.add("back-to-top__hidden");
     }
 }
 
