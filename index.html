@@ -27,7 +27,7 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#about" class="nav__link">a propos</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">travaux</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">travaux</a></li>
                 <li class="nav__item"><a href="#stream" class="nav__link">streaming</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
             </ul>
@@ -37,21 +37,21 @@
     <img class="fixed-background" src="img/coussins_fond.jpg" alt="Des coussins sur fond de bleu et de violet... Trop stylé !!">
     <h1 class="wip">/// THIS PORTFOLIO IS STILL WORK IN PROGRESS</h1>
 
-    <!-- Main page -->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">
+    <!-- Home -->
+    <section class="home" id="home">
+        <h1 class="section__title section__title--home">
             This is <strong>KANNAPÉ</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">&lt;videogame dev/&gt;</p>
-        <img class="intro__img" src="img/photo-face_02.jpg" alt="A picture of Thomas with big ass glasses">
+        <p class="section__subtitle section__subtitle--home">&lt;videogame dev/&gt;</p>
+        <img class="home__img" src="img/photo-face_02.jpg" alt="A picture of Thomas with big ass glasses">
     </section>
 
     <!-- About me -->
-    <section class="about-me" id="about">
+    <section class="about" id="about">
         <h2 class="section__title section__title--about">Qui suis-je</h2>
         <p class="section__subtitle section__subtitle--about">Étudiant en Programmation JV & Streamer</p>
 
-        <div class="about-me__body">
+        <div class="about__body">
             <p>
                 Je m’appelle Thomas Berger, j’ai 23 ans et je suis étudiant en programmation JV à Créajeux, Nîmes. Actuellement à la recherche d’un stage de fin d’étude, j’ai décidé de réaliser ce site afin de parler de moi et de mes projets professionnels.<br/><br/>
                 Depuis toujours ou presque, je n’ai qu’un seul rêve, donner vie à mes histoires. Et je vois cet avenir possible dans le jeu-vidéo, que je considère comme un art à part entière, comme la peinture ou le cinéma.<br/><br/>
@@ -60,13 +60,14 @@
             </p>
         </div>
 
-        <img class="about-me__img" src="img/photo-about_me.png" alt="Jean Bresson is very dark and sombre"/>
+        <img class="about__img" src="img/photo-about_me.png" alt="Jean Bresson is very dark and sombre"/>
+        <img class="about__img-little" src="img/photo-about_me-little.png" alt="Jean Bresson is very dark and sombre, but in little"/>
     </section>
 
-	<!-- My work (game projects / gameplay prototypes -->
-    <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My Work</h2>
-        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+	<!-- Projects portfolio -->
+    <section class="projects" id="projects">
+        <h2 class="section__title section__title--projects">My Work</h2>
+        <p class="section__subtitle section__subtitle--projects">A selection of my range of work</p>
 
         <div class="portfolio">
             <!-- Portfolio item 01 -->
@@ -102,9 +103,10 @@
     </section>
 
 	<!-- twitch.tv/KANNAPÉ -->
-    <section class="my-services" id="stream">
-        <h2 class="section__title section__title--services">What I do</h2>
+    <section class="stream" id="stream">
+        <h2 class="section__title section__title--stream">What I do</h2>
 
+        <!-- a supprimer -->
         <div class="services">
             <div class="service">
                 <h3>Design + Development</h3>
@@ -122,7 +124,7 @@
             </div> <!-- service -->
         </div>
 
-        <a href="#work" class="btn">My Work</a>
+        <a href="#projects" class="btn">My Work</a>
     </section>
 
     <!-- Contact CV -->
@@ -132,8 +134,8 @@
 	<footer class="footer">
 		<a href="mailto:bergerthomas38@gmail.com" class="footer__link">bergerthomas@gmail.com</a>
         <div class="legals">
-            <p>Ce site a été entièrement développé par Thomas BERGER et est hébergé sur OVH (enfin, pas encore, pour l'instant sur Github Pages).</p>
-            <p>La plupart des éléments graphiques ont été réalisés par <a href="#" class="footer__link">Néon</a>.</p>
+            <p>Ce site a été <a href="LICENSE.txt" class="footer__link">développé sous licence</a> par Thomas BERGER et est hébergé sur OVH (enfin, pas encore, pour l'instant sur Github Pages).</p>
+            <p>La plupart des éléments graphiques ont été réalisés par <a href="https://twitter.com/HE2S2P" class="footer__link">Néon</a>.</p>
         </div>
 
         <ul class="social-list">
