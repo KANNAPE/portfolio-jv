@@ -1,6 +1,22 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 
+let backToTop = document.getElementById("back-to-top");
+backToTop.addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        backToTop.classList.remove("back-to-top__hidden");
+    } else {
+        backToTop.classList.toggle("back-to-top__hidden");
+    }
+}
+
 navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
 });

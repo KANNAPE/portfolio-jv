@@ -58,18 +58,11 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-nav: .95rem;
-    --fs-about: 1.125rem;
     --fs-body: 1rem;
     --fs-little: .8rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
             0.125em 0.125em 0.25em rgba(0,0,0,.15);
-}
-
-@media (min-width: 1100px) {
-    :root {
-        --fs-about: 1.25rem!important; /* je sais pas pourquoi ça marche pas sans le !important... (mon niveau ridicule en dev web déso pas déso je suis game dev */
-    }
 }
 
 @media (min-width: 800px) {
@@ -78,7 +71,6 @@
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-nav: 1.3rem;
-        --fs-about: 1rem;
         --fs-body: 1.125rem;
         --fs-little: .95rem;
     }
@@ -129,6 +121,23 @@ img {
 
 strong {
     font-weight: var(--fw-bold);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 1.5em;
+    left: 1em;
+    z-index: 5;
+    cursor: pointer;
+    transition: transform .5s ease-in-out, filter .1s linear;
+}
+
+.back-to-top__hidden {
+    transform: translateX(-200%) rotate(-180deg);
+}
+
+.back-to-top:hover {
+    filter: brightness(75%);
 }
 
 
