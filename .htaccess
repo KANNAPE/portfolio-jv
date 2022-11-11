@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^kannape.fr [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.kannape.fr [NC]
+RewriteRule ^(.*)$ https://www.kannape.fr/$1 [L,R=301,NC]
