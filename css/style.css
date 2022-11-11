@@ -789,23 +789,23 @@ header {
     bottom: 0;
     width: 100%;
     background: var(--clr-black);
-    color: var(--clr-accent);
     text-align: center;
     padding: 1.5em 0 .5em;
-    font-size: var(--fs-h3);
 }
 
 .footer a {
-    color: inherit;
     text-decoration: none;
 }
 
-.footer__link:hover,
-.social-list__link:hover {
-    opacity: .7;
-    cursor: pointer;
+.footer__mail {
+    color: var(--clr-accent);
 }
 
+.footer__link {
+    color: var(--clr-light);
+}
+
+.footer__mail:hover,
 .footer__link:hover {
     text-decoration: underline;
 }
@@ -824,13 +824,22 @@ header {
 
 .social-list__link {
     padding: .5em;
+    color: var(--clr-accent);
+}
+
+.footer__mail:hover,
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.footer__mail,
+.social-list {
+    font-size: var(--fs-h3);
 }
 
 .legals {
     font-size: var(--fs-little);
     color: var(--clr-grey);
-}
-
-.legals a {
-    color: var(--clr-light);
 }
