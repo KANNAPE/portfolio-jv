@@ -42,12 +42,13 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-white: #fff;
-    --clr-light: #eee;
+    --clr-white: #eee;
+    --clr-light: #d6d6d6;
     --clr-grey: #888;
     --clr-dark: #333;
     --clr-black: #1a1a1a;
     --clr-accent: #3aa9fc;
+    --clr-gradient: linear-gradient(45deg, #12b4c3, #8c4cfa);
 
     --clr-nav-1: #00ffff;
     --clr-nav-2: #aeff00;
@@ -106,7 +107,7 @@ body {
 }
 
 section {
-    padding: calc(5em + 100px) 10vw 5em 10vw;
+    padding: calc(5em + 100px) 10vw 20px 10vw;
     min-height: 100vh;
 }
 
@@ -230,8 +231,9 @@ h3 {
 
 .section__subtitle--home,
 .section__subtitle--about {
-    background: var(--clr-accent);
+    background: var(--clr-gradient);
     font-family: var(--ff-secondary);
+    color: var(--clr-white);
 
     box-shadow: var(--bs);
 
@@ -509,7 +511,7 @@ header {
             "img subtitle";
         grid-template-columns: min-content 1fr;
         grid-template-rows: 160px min-content;
-        background-color: #eee;
+        background-color: var(--clr-light);
     }
 
     .home__img {
@@ -537,7 +539,7 @@ header {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .home {
         grid-template-rows: 175px min-content;
     }
@@ -779,10 +781,6 @@ header {
 
 
 
-
-/* Almosst Footer */
-
-
 /* Footer */
 .footer {
     position: absolute;
@@ -796,10 +794,18 @@ header {
     text-decoration: none;
 }
 
-.legals {
+.footer div {
     padding-top: 1.5em;
     font-size: var(--fs-little);
     color: var(--clr-grey);
+}
+
+.legals__mobile {
+    font-size:  var(--fs-h3);
+}
+
+.legals {
+    display: none;
 }
 
 .footer__mail {
@@ -816,10 +822,6 @@ header {
     justify-content: center;
     margin: 0 0 .5em;
     padding: 0;
-}
-
-.social-list__item {
-    margin: 0 .5em;
 }
 
 .social-list__link {
@@ -842,4 +844,23 @@ header {
 .footer__mail,
 .social-list {
     font-size: var(--fs-h3);
+}
+
+@media(min-width: 600px)
+{
+    .footer div {
+        margin: 0 115px;
+    }
+
+    .legals__mobile {
+        display: none;
+    }
+
+    .legals {
+        display: block;
+    }
+
+    .social-list__item {
+        margin: 0 .5em;
+    }
 }
