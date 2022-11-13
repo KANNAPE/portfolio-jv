@@ -780,7 +780,7 @@ header {
 
 
 
-
+/* Almosst Footer */
 
 
 /* Footer */
@@ -790,11 +790,16 @@ header {
     width: 100%;
     background: var(--clr-black);
     text-align: center;
-    padding: 1.5em 0 .5em;
 }
 
 .footer a {
     text-decoration: none;
+}
+
+.legals {
+    padding-top: 1.5em;
+    font-size: var(--fs-little);
+    color: var(--clr-grey);
 }
 
 .footer__mail {
@@ -805,16 +810,11 @@ header {
     color: var(--clr-light);
 }
 
-.footer__mail:hover,
-.footer__link:hover {
-    text-decoration: underline;
-}
-
 .social-list {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 1.5em 0 .5em;
+    margin: 0 0 .5em;
     padding: 0;
 }
 
@@ -828,6 +828,11 @@ header {
 }
 
 .footer__mail:hover,
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__mail:hover,
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
@@ -837,9 +842,4 @@ header {
 .footer__mail,
 .social-list {
     font-size: var(--fs-h3);
-}
-
-.legals {
-    font-size: var(--fs-little);
-    color: var(--clr-grey);
 }
