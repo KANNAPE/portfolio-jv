@@ -124,6 +124,10 @@ strong {
     font-weight: var(--fw-bold);
 }
 
+.logo {
+    margin-left: 10vw;
+}
+
 .back-to-top {
     position: fixed;
     bottom: 1.5em;
