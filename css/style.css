@@ -50,10 +50,10 @@
     --clr-accent: #3aa9fc;
     --clr-gradient: linear-gradient(45deg, #12b4c3, #8c4cfa);
 
-    --clr-nav-1: #00ffff;
-    --clr-nav-2: #aeff00;
-    --clr-nav-3: #ffac00;
-    --clr-nav-4: #ff0044;
+    --clr-nav-1: #12b4c3; /*00ffff*/
+    --clr-nav-2: #579cd5; /*aeff00*/
+    --clr-nav-3: #7a75eb; /*ffac00*/
+    --clr-nav-4: #8c4cfa; /*ff0044*/
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
