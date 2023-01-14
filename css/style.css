@@ -51,9 +51,9 @@
     --clr-gradient: linear-gradient(45deg, #12b4c3, #8c4cfa);
 
     --clr-nav-1: #00ffff;
-    --clr-nav-2: #aeff00;
-    --clr-nav-3: #ffac00;
-    --clr-nav-4: #ff0044;
+    --clr-nav-2: #3aa9fc;
+    --clr-nav-3: #777ae8;
+    --clr-nav-4: #8c4cfa;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -591,7 +591,7 @@ header {
 }
 
 @media (min-width: 600px) {
-    .about {
+    .about__content {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 100px min-content 1fr;
@@ -634,7 +634,7 @@ header {
 }
 
 @media (min-width: 1300px) {
-    .about {
+    .about__content {
         grid-template-areas:
             "title img"
             "subtitle img"
@@ -685,6 +685,8 @@ header {
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    border-radius: .7em;
+    margin: .3em;
 }
 
 .portfolio__img {
