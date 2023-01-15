@@ -247,7 +247,7 @@ h3 {
 .section__subtitle--projects {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 .about__body {
@@ -679,37 +679,52 @@ header {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+    z-index: 0;
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    /*background: var(--clr-accent);*/
     overflow: hidden;
     border-radius: .7em;
     margin: .3em;
+    transition: transform 100ms ease-in-out;
+    position: relative;
+}
+
+.portfolio__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 10;
+    content: '';
+    opacity: 0;
+    box-shadow: inset 0 0 3em var(--clr-accent);
+    transition: opacity 300ms ease-in-out;
 }
 
 .portfolio__img {
-    transition:
-            transform 750ms cubic-bezier(.5, 0, .5, 1),
-            opacity 250ms linear;
-}
-
-.portfolio__item:focus {
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1);
     position: relative;
-    z-index: 2;
-}
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .75;
+    z-index: -1;
 }
 
 .portfolio__item:hover {
     transform: translateY(-10px);
 }
+
+.portfolio__item:hover::before {
+    opacity: 1;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+}
+
+
 
 
 
