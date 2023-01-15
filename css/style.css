@@ -690,6 +690,7 @@ header {
     margin: .3em;
     transition: transform 100ms ease-in-out;
     position: relative;
+    pointer-events: none;
 }
 
 .portfolio__item::before {
@@ -710,6 +711,7 @@ header {
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1);
     position: relative;
     z-index: -1;
+    pointer-events: auto;
 }
 
 .portfolio__item:hover {
