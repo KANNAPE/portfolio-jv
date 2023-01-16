@@ -1,10 +1,12 @@
 /* General styling */
 section {
-    background-color: var(--clr-dark)
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 section:nth-child(2n + 1) {
     background-color: var(--clr-light);
+    color: var(--clr-dark);
 }
 
 
