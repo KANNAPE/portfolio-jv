@@ -215,6 +215,10 @@ h3 {
     font-size: var(--fs-nav);
 }
 
+.nav__link--active {
+
+}
+
 .section__title {
     margin-bottom: .25em;
 }
@@ -748,7 +752,7 @@ header {
 /* Stream section */
 .stream {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    background-image: url(../img/background/services-bg.jpg);
     background-size: cover;
     background-position: center;
     color: var(--clr-light);

@@ -1,0 +1,37 @@
+/* General styling */
+section {
+    background-color: var(--clr-dark)
+}
+
+section:nth-child(2n + 1) {
+    background-color: var(--clr-light);
+}
+
+
+
+
+/* UNCHAINED Section */
+
+
+
+
+
+/* CotCotBOOM Section */
+
+
+
+
+
+/* MushPit Section */
+
+
+
+
+
+/* Fracture Section */
+
+
+
+
+
+/* Far Tide Section */
