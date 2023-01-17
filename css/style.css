@@ -596,18 +596,18 @@ header {
 @media (min-width: 600px) {
     .about__content {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 5fr 3fr;
         grid-template-rows: 100px min-content 1fr;
         grid-column-gap: 2em;
 
-        grid-template-areas:
-        "title img"
-        "subtitle img"
-        "text text";
+        /*grid-template-areas:*/
+        /*"title img"*/
+        /*"subtitle img"*/
+        /*"text text";*/
     }
 
     .section__title--about {
-        grid-area: title;
+        /*grid-area: title;*/
         margin-top: .25em;
     }
 
@@ -620,39 +620,45 @@ header {
         margin-bottom: 0;
     }
 
-    .about__img {
-        display: none;
-    }
+    /*.about__img {*/
+    /*    display: none;*/
+    /*}*/
 
-    .about__img-little {
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-        display: block;
-    }
+    /*.about__img-little {*/
+    /*    grid-area: img;*/
+    /*    position: relative;*/
+    /*    z-index: 2;*/
+    /*    display: block;*/
+    /*}*/
 
     .about__body {
-        grid-area: text;
+        /*grid-area: text;*/
+        grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 1300px) {
     .about__content {
-        grid-template-areas:
-            "title img"
-            "subtitle img"
-            "text img";
+        /*grid-template-areas:*/
+        /*    "title img"*/
+        /*    "subtitle img"*/
+        /*    "text img";*/
     }
 
-    .about__img {
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-        display: block;
-    }
+    /*.about__img {*/
+    /*    grid-area: img;*/
+    /*    position: relative;*/
+    /*    z-index: 2;*/
+    /*    display: block;*/
+    /*}*/
 
-    .about__img-little {
-        display: none;
+    /*.about__img-little {*/
+    /*    display: none;*/
+    /*}*/
+
+    /* temp */
+    .about__body {
+        font-size: 1.5em;
     }
 }
 
@@ -813,11 +819,14 @@ header {
 
 /* Footer */
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background: var(--clr-black);
     text-align: center;
+}
+
+.footer__absolute {
+    position: absolute;
+    bottom: 0;
 }
 
 .footer a {
@@ -850,8 +859,8 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0 0 .5em;
-    padding: 0;
+    padding: 0 0 .5em;
+    margin: 0;
 }
 
 .social-list__link {
